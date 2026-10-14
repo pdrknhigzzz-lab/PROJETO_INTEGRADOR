@@ -1,0 +1,95 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+  
+  .login {
+    width: 52%;
+    min-height: 100vh;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 8%;
+  }
+  
+  .login b {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 18px;
+  }
+  
+  .subtitulo {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 38px;
+  }
+  
+  .card-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+  
+  .card-login label {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #111111;
+  }
+  
+  .card-login input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    background: #EEEEEE;
+    border: none;
+    border-radius: 9px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .card-login input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .btn-login {
+    width: 100%;
+    height: 47px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #713CFF;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+   
+  }
+  
+  .btn-login:hover {
+    background: #5B21B6;
+  }
+    
+.foto1 {
+  width: 700px;
+  margin-left: 900px;
+  margin-top: -400px;
+  border-radius: 100px;
+}
+.login span {
+  color: #5B21B6;
+}
+  
+  
+  
