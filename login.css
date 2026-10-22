@@ -90,6 +90,31 @@
 .login span {
   color: #5B21B6;
 }
-  
-  
+.login2 {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.erro {
+  border: 2px solid red !important;
+  background-color: #ffe6e6 !important;
+  outline: none;
+}
+
+
+
+#mensagemErro {
+  color: red;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.card-login input.erro,
+.card-login input.erro:focus {
+  border: 2px solid red !important;
+  background-color: #ffe6e6 !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
   
