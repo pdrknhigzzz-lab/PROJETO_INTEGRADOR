@@ -59,7 +59,7 @@ body {
 .menu-links a {
     color: #777777;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 15px;
     white-space: nowrap;
 }
 
@@ -67,11 +67,11 @@ body {
     color: #7540ff;
 }
 
-.menu-links .link-sobre {
+.menu-links .link-cuidados {
     color: #222222;
     background: #f2f2f2;
     padding: 11px 15px;
-    border-radius: 30px;
+    border-radius: 30px;q
 }
 
 .menu-acoes {
