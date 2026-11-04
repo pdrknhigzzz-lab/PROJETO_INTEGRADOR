@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hairstyle - Dúvidas</title>
+
+    <link rel="stylesheet" href="fac.css">
+</head>
+
+<body>
+
+
+    <header>
+        <h2>Hair<span>style</span></h2>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">FAC</a>
+            <a href="#">Sobre</a>
+        </nav>
+
+        <button>Entrar</button>
+
+
+    </header>
+
+    <main>
+
+     
+        <section class="perguntas">
+            <h1>TIRE SUAS DÚVIDAS</h1>
+
+            <p>Principais dúvidas:</p>
+        
+            <button class="pergunta" onclick="mostrarResposta('pagamento')">
+                Quais são as formas de pagamento aceitas?
+            </button>
+        
+            <button class="pergunta" onclick="mostrarResposta('prazo')">
+                Qual é o prazo do meu atendimento?
+            </button>
+        
+            <button class="pergunta" onclick="mostrarResposta('contato')">
+                Como posso entrar em contato com a loja?
+            </button>
+        
+            <button class="pergunta" onclick="mostrarResposta('horarios')">
+                Quantos horários estão disponíveis para atendimento?
+            </button>
+        
+            <button class="pergunta" onclick="mostrarResposta('cancelamento')">
+                Como posso cancelar um pedido?
+            </button>
+        
+            <button class="pergunta" onclick="mostrarResposta('profissionais')">
+                Quantos profissionais atendem no estabelecimento?
+            </button>
+    
+            <div class="outra">
+                <input
+                    type="text"
+                    id="outraPergunta"
+                    placeholder="Escreva sua pergunta..."
+                >
+        
+                <button onclick="enviarPergunta()">
+                    Enviar pergunta
+                </button>
+            </div>
+       
+            <div class="contatos">
+                <p>EMAIL: hairstyle@gmail.com</p>
+                <p>Número de contato: (55) 99 9999-9999</p>
+                <p>INSTAGRAM DA LOJA: hairstyle_ofc</p>
+            </div>
+        
+        </section>
+
+       
+        <section class="respostas">
+
+            <h1>Espero ter ajudado</h1>
+
+            <div class="chat">
+        
+                <p>CHAT DE RESPOSTAS:</p>
+        
+                <div id="resposta">
+                    Clique em uma pergunta para ver a resposta.
+                </div>
+        
+            </div>
+        </section>
+
+    </main>
+
+    <script src="fac.js"></script>
+
+
+ 
+</body>
+
+</html>

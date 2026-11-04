@@ -1,0 +1,175 @@
+
+/* Configurações gerais */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 30px;
+    background-image: url(v4.png);
+    background-color: #c23333;
+    font-family: Arial, sans-serif;
+}
+
+/* Menu superior */
+header {    
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+header h2 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+header span {
+    color: #9747ff;
+}
+
+nav {
+    display: flex;
+    gap: 70px;
+}
+
+nav a {
+    text-decoration: none;
+    color: gray;
+}
+
+button {
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:last-child {
+    background-color: #703cff;
+    color: white;
+}
+
+/* Áreas principais */
+main {
+    display: flex;
+    min-height: 750px;
+}
+
+/* Área das perguntas */
+.perguntas {
+    background-color: white;
+    width: 50%;
+    padding: 20px 40px;
+}
+
+.perguntas h1 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.pergunta {
+    background-color: #ededed;
+    padding: 12px;
+    margin-bottom: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Área dos contatos */
+.contatos {
+    border-top: 1px solid gray;
+    margin-top: 50px;
+    padding-top: 10px;
+}
+
+.contatos p {
+    background-color: #ededed;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+/* Área das respostas */
+.respostas {
+    background-color: #111111;
+    color: white;
+    width: 50%;
+    padding: 20px;
+    text-align: center;
+}
+
+.respostas h1 {
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.chat {
+    background-color: #4d4d4d;
+    height: 600px;
+    margin: 35px auto;
+    border-radius: 10px;
+    padding: 1px;
+    width: 85%;
+}
+
+/* Perguntas clicáveis */
+.pergunta {
+    display: block;
+    width: 100%;
+    background-color: #ededed;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 6px;
+    margin-bottom: 25px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Efeito ao passar o mouse */
+.pergunta:hover {
+    background-color: #d8d8d8;
+}
+
+/* Campo para escrever outra pergunta */
+.outra {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.outra input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ededed;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.outra button {
+    background-color: #703cff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.outra button:hover {
+    background-color: #5728d8;
+}
+
+/* Área onde as respostas aparecem */
+#resposta {
+    background-color: #ededed;
+    color: black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 20px;
+    text-align: left;
+    overflow-wrap: anywhere;
+}
