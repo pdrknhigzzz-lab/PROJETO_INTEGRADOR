@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <main class="container">
+
+        <section class="cadastro">
+
+            <div class="titulo">
+                <span>Hair Style</span>
+                <h1>Crie sua conta.</h1>
+                <p>Cadastre-se para começar sua transformação.</p>
+            </div>
+
+            <form action="cadastro.php" method="POST">
+
+                <div class="campo">
+                    <label for="nome">Nome completo</label>
+                    <input type="text" id="nome" name="nome"
+                    placeholder="Digite seu nome completo" required>
+                </div>
+
+                <div class="campo">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email"
+                    placeholder="voce@email.com" required>
+                </div>
+
+                <div class="campo">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha"
+                    placeholder="Crie uma senha" required>
+                </div>
+
+                <div class="campo">
+                    <label for="confirmar_senha">Confirmar senha</label>
+                    <input type="password" id="confirmar_senha"
+                    name="confirmar_senha"
+                    placeholder="Digite sua senha novamente" required>
+                </div>
+
+                <button type="submit" class="botao">
+                    Criar conta
+                </button>
+
+            </form>
+
+
+        </section>
+
+        <section class="imagem">
+            <img src="./img/foto1.png" alt="Modelo Hair Style">
+        </section>
+
+    </main>
+
+</body>
+</html>
