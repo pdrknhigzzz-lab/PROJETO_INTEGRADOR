@@ -15,15 +15,27 @@
 <b> Bem-vindo de volta.</b>
 <p class="subtitulo">Entre para continuar de onde parou.</p>
 
-<form id="formLogin">
+<form action="login.php" id="formLogin">
     <div class="card-login">
         <label for="email">E-mail</label>
-        <input type="email" id="email" placeholder="voce@email.com">
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="voce@email.com"
+            required
+        >
     </div>
 
     <div class="card-login">
         <label for="senha">Senha</label>
-        <input type="password" id="senha" placeholder="*******">
+        <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Digite sua senha"
+            required
+        >
     </div>
  <p id="mensagemErro"></p>
     <button type="submit" class="btn-login"> <a class="login2" href="">Entrar</a> </button>
@@ -39,5 +51,8 @@
 
 
 </div>
+
+
+
 </body>
 </html> 
