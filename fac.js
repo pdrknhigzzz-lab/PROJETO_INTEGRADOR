@@ -30,28 +30,36 @@ function mostrarResposta(pergunta) {
 
 
 // Função para enviar outra pergunta
+
 function enviarPergunta() {
 
     const campo = document.getElementById("outraPergunta");
-
     const resposta = document.getElementById("resposta");
 
     const pergunta = campo.value.trim();
 
     if (pergunta == "") {
         resposta.innerHTML = "Por favor, escreva uma pergunta.";
+        return;
     }
 
-    else {
-        resposta.innerHTML =
-            "<strong>Sua pergunta:</strong><br>" +
-            pergunta +
-            "<br><br>" +
-            "<strong>Resposta:</strong><br>" +
-            "FODA-SE ARRANJA OUTRA IMPRESA ENTÃO KARALHO.";
+    fetch("enviar_pergunta.php", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: "pergunta=" + encodeURIComponent(pergunta)
+    })
 
+    .then(response => response.text())
+
+    .then(dados => {
+        resposta.innerHTML = dados;
         campo.value = "";
-    }
+    })
+
+    .catch(erro => {
+        resposta.innerHTML = "Erro ao enviar sua pergunta.";
+    });
 
 }
-
