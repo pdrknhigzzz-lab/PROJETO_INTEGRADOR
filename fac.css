@@ -61,8 +61,8 @@ main {
 /* Área das perguntas */
 .perguntas {
     background-color: white;
-    width: 50%;
-    padding: 20px 40px;
+    width: 60%;
+    padding: 30px 40px;
 }
 
 .perguntas h1 {
@@ -96,7 +96,7 @@ main {
     background-color: #111111;
     color: white;
     width: 50%;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
 }
 
