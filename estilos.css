@@ -1,0 +1,442 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #111;
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* CABEÇALHO */
+
+.header {
+    width: 100%;
+    min-height: 55px;
+    padding: 0 3.5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.logo {
+    color: #111;
+    font-size: 19px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo span,
+.footer-logo span {
+    color: #873cff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+nav a {
+    color: #111;
+    text-decoration: none;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    color: #873cff;
+}
+
+nav .ativo {
+    background: #e9e9e9;
+    padding: 5px 12px;
+    border-radius: 20px;
+}
+
+nav .btn-header {
+    background: #7838ff;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 20px;
+}
+
+/* CONTEÚDO */
+
+main {
+    width: 100%;
+    min-height: 490px;
+    padding: 35px 7.5% 25px;
+}
+
+.introducao {
+    margin-bottom: 65px;
+}
+
+.introducao span {
+    color: #813bff;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.introducao h1 {
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin-top: 17px;
+}
+
+/* CATEGORIAS */
+
+.categorias {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 18px 20px;
+    margin-bottom: 55px;
+}
+
+.categoria {
+    background: #000000;
+    color: white;
+    border-radius: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    padding: 15px 20px;
+    min-width: 0;
+}
+
+.categoria.grande {
+    grid-column: span 3;
+    height: 175px;
+}
+
+.categoria.pequena {
+    grid-column: span 2;
+    height: 140px;
+}
+
+.categoria small {
+    color: #b78aff;
+    font-size: 30px;
+}
+
+.categoria h3 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+
+.categoria img {
+    width: 43%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center bottom;
+}
+
+/* FILTROS */
+
+.filtros {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    max-width: 100%;
+    background: #ededed;
+    border-radius: 30px;
+    padding: 4px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.filtros button {
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    padding: 7px 13px;
+    font-size: 15px;
+    color: #555;
+    cursor: pointer;
+}
+
+
+/* ESTILOS DE CABELO */
+
+.estilos {
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    gap: 22px;
+}
+
+.estilo {
+    background: #f5f5f5;
+    border-radius: 13px;
+    overflow: hidden;
+    padding: 12px;
+    min-height: 190px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.estilo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px #00000015;
+}
+
+.estilo img {
+    width: 100%;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 9px;
+}
+
+.estilo h4 {
+    font-size: 12px;
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.estilo p {
+    font-size: 10px;
+    color: #777;
+    margin-top: 3px;
+}
+
+/* BOTÃO SIMULADOR */
+
+.simulador {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0;
+}
+
+.simulador a {
+    background: #111;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    font-size: 12px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.simulador a:hover {
+    background: #813bff;
+}
+
+/* RODAPÉ */
+
+footer {
+    width: 100%;
+    background: #050505;
+    color: white;
+    margin-top: 0;
+}
+
+.footer-conteudo {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr 1.2fr;
+    gap: 50px;
+    padding: 40px 5%;
+    min-height: 180px;
+}
+
+.footer-logo h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-logo p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ddd;
+}
+
+.redes {
+    display: flex;
+    gap: 8px;
+    margin-top: 15px;
+}
+
+.redes a {
+    color: white;
+    border: 1px solid #555;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 9px;
+}
+
+.footer-nav h4,
+.novidades h4 {
+    color: #b68aff;
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.links {
+    display: flex;
+    gap: 45px;
+}
+
+.links div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.links a,
+.footer-final a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 12px;
+}
+
+.links a:hover,
+.footer-final a:hover {
+    color: white;
+}
+
+.novidades p {
+    font-size: 12px;
+    color: #ccc;
+    margin-bottom: 15px;
+}
+
+.novidades form {
+    display: flex;
+    gap: 10px;
+}
+
+.novidades input {
+    width: 100%;
+    min-width: 0;
+    padding: 11px 15px;
+    border-radius: 25px;
+    background: #171717;
+    border: 1px solid #333;
+    color: white;
+    outline: none;
+}
+
+.novidades button {
+    background: #813bff;
+    color: white;
+    border: none;
+    padding: 0 22px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.footer-final {
+    border-top: 1px solid #333;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-final p {
+    font-size: 11px;
+    color: #aaa;
+}
+
+.footer-final div {
+    display: flex;
+    gap: 30px;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    .header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    main {
+        padding: 35px 5%;
+    }
+
+    .categorias {
+        gap: 12px;
+    }
+
+    .footer-conteudo {
+        gap: 25px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .introducao {
+        margin-bottom: 35px;
+    }
+
+    .introducao h1 {
+        font-size: 23px;
+    }
+
+    .categorias {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .categoria.grande,
+    .categoria.pequena {
+        grid-column: span 2;
+        height: 125px;
+    }
+
+    .estilos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .estilo img {
+        height: 150px;
+    }
+
+    .filtros {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .footer-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-final {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .footer-final div {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+}
