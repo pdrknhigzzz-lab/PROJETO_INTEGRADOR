@@ -350,3 +350,491 @@ input:focus-visible {
         padding: 10px 20px;
     }
 }
+
+/* ======================================================
+   RESPONSIVIDADE — ajustes compartilhados do HairStyle
+   1024px: tablet | 850px: menu móvel | 600px: celular
+   ====================================================== */
+
+.site-header > *,
+.pagina-index .conteudo > *,
+.pagina-estilos .categoria > *,
+.pagina-estilos .footer-conteudo > *,
+.pagina-problema .card,
+.pagina-problema .estilo,
+.pagina-sobre .card,
+.pagina-auth .cadastro,
+.pagina-simulador .modelo {
+    min-width: 0;
+}
+
+.site-header .site-menu[hidden] {
+    display: none;
+}
+
+.site-header .site-menu,
+.site-header .site-cta {
+    min-height: 44px;
+}
+
+.site-cta {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.pagina-estilos .categoria span {
+    overflow-wrap: anywhere;
+}
+
+.pagina-estilos .categoria img {
+    flex-shrink: 0;
+}
+
+.pagina-estilos .links,
+.pagina-estilos .footer-final,
+.pagina-estilos .footer-final div {
+    flex-wrap: wrap;
+}
+
+.pagina-estilos .novidades button {
+    min-height: 44px;
+}
+
+.pagina-auth input,
+.pagina-fac .outra input {
+    max-width: 100%;
+}
+
+.pagina-fac .contatos p,
+.pagina-fac .pergunta,
+.pagina-simulador .corte {
+    overflow-wrap: anywhere;
+}
+
+/* Tablets e notebooks pequenos */
+@media (min-width: 851px) and (max-width: 1024px) {
+    .site-header .site-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .site-nav a {
+        padding: 8px 0;
+    }
+
+    .site-header .site-cta {
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 1024px) {
+    .pagina-estilos .footer-conteudo {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pagina-estilos .novidades {
+        grid-column: 1 / -1;
+        max-width: 520px;
+        width: 100%;
+    }
+
+    .pagina-sobre .card {
+        padding: 24px 18px;
+    }
+
+    .pagina-auth .container {
+        gap: 24px;
+    }
+}
+
+/* Menu móvel e layouts em tablets */
+@media (max-width: 850px) {
+    .site-header {
+        padding: 12px 5%;
+    }
+
+    .site-header .site-menu:not([hidden]) {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .site-header .site-nav a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        white-space: normal;
+        justify-content: flex-start;
+    }
+
+    .pagina-index .conteudo {
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+    }
+
+    .pagina-index .conteudo h1,
+    .pagina-index .conteudo p {
+        max-width: 680px;
+        width: 100%;
+    }
+
+    .pagina-index .conteudo p {
+        padding-left: 0;
+    }
+
+    .pagina-index .conteudo p br {
+        display: none;
+    }
+
+    .pagina-index .botoes,
+    .pagina-index .estatisticas {
+        justify-content: center;
+    }
+
+    .pagina-index .imagem {
+        max-width: 540px;
+    }
+
+    .pagina-index .imagem img {
+        display: block;
+        margin: auto;
+    }
+
+    .pagina-estilos .categorias {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pagina-estilos .categoria.grande,
+    .pagina-estilos .categoria.pequena {
+        grid-column: span 1;
+        height: 140px;
+    }
+
+    .pagina-estilos .categoria:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .pagina-estilos .footer-conteudo {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-problema .cards-problema,
+    .pagina-problema .galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .pagina-cuidados .rodape-grade {
+        gap: 32px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .pagina-index main {
+        min-height: 0;
+        padding: 36px 5%;
+    }
+
+    .pagina-index .conteudo h1 {
+        font-size: clamp(28px, 8vw, 40px);
+        line-height: 1.2;
+        letter-spacing: -1px;
+    }
+
+    .pagina-index .conteudo h1 br {
+        display: none;
+    }
+
+    .pagina-index .botoes {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 380px;
+    }
+
+    .pagina-index .botoes a {
+        width: 100%;
+        min-height: 44px;
+        white-space: normal;
+        padding: 14px 16px;
+        text-align: center;
+    }
+
+    .pagina-index .estatisticas {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 10px;
+        padding: 16px 0;
+        width: 100%;
+    }
+
+    .pagina-index .estatisticas span {
+        overflow-wrap: anywhere;
+        font-size: 11px;
+    }
+
+    .pagina-estilos main {
+        padding: 26px 5%;
+    }
+
+    .pagina-estilos .categorias {
+        grid-template-columns: minmax(0, 1fr);
+        margin-bottom: 28px;
+    }
+
+    .pagina-estilos .categoria.grande,
+    .pagina-estilos .categoria.pequena {
+        height: 125px;
+        padding: 12px 16px;
+    }
+
+    .pagina-estilos .estilos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .pagina-estilos .estilo img {
+        height: clamp(105px, 30vw, 165px);
+    }
+
+    .pagina-estilos .filtros button {
+        min-height: 44px;
+    }
+
+    .pagina-estilos .footer-final {
+        gap: 12px;
+    }
+
+    .pagina-estilos .novidades form {
+        flex-direction: column;
+    }
+
+    .pagina-estilos .novidades button {
+        width: 100%;
+    }
+
+    .pagina-sobre .sobre-container {
+        padding: 36px 5%;
+    }
+
+    .pagina-sobre .sobre-conteudo {
+        gap: 24px;
+    }
+
+    .pagina-sobre .sobre-titulo {
+        font-size: clamp(28px, 7vw, 36px);
+        margin-bottom: 20px;
+    }
+
+    .pagina-sobre .sobre-botoes {
+        width: 100%;
+    }
+
+    .pagina-sobre .sobre-botoes a {
+        flex: 1 1 180px;
+        min-height: 44px;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .pagina-auth .login,
+    .pagina-auth .container {
+        padding: 72px 5% 24px;
+    }
+
+    .pagina-auth .login h1,
+    .pagina-auth .titulo h1 {
+        font-size: clamp(24px, 7vw, 30px);
+    }
+
+    .pagina-auth .card-login input,
+    .pagina-auth .campo input,
+    .pagina-fac .outra input,
+    .pagina-cuidados .rodape-form input,
+    .pagina-estilos .novidades input {
+        font-size: 16px;
+        min-height: 44px;
+    }
+
+    .pagina-auth .login-imagem {
+        padding: 12px 5% 24px;
+    }
+
+    .pagina-auth .login-imagem img,
+    .pagina-auth .imagem img {
+        max-height: 320px;
+        object-fit: contain;
+    }
+
+    .pagina-fac main {
+        margin: 16px auto;
+        padding: 0 12px;
+    }
+
+    .pagina-fac .perguntas,
+    .pagina-fac .respostas {
+        padding: 20px 14px;
+    }
+
+    .pagina-fac .pergunta,
+    .pagina-fac .outra button {
+        min-height: 44px;
+    }
+
+    .pagina-fac .outra button {
+        width: 100%;
+    }
+
+    .pagina-fac .chat {
+        margin: 20px auto;
+        min-height: 180px;
+    }
+
+    .pagina-cuidados .container {
+        padding-inline: 16px;
+    }
+
+    .pagina-cuidados .introducao .container {
+        padding-block: 40px;
+    }
+
+    .pagina-cuidados .introducao h1 {
+        font-size: clamp(28px, 8vw, 36px);
+    }
+
+    .pagina-cuidados .paineis {
+        margin-top: 28px;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-cuidados .painel {
+        padding: 16px;
+    }
+
+    .pagina-cuidados .rotina-cabecalho {
+        flex-wrap: wrap;
+    }
+
+    .pagina-cuidados .tipo-cabelo,
+    .pagina-cuidados .filtros button {
+        min-height: 44px;
+    }
+
+    .pagina-cuidados .filtros {
+        width: 100%;
+        flex-wrap: wrap;
+        border-radius: 20px;
+    }
+
+    .pagina-cuidados .conteudo {
+        padding-block: 40px;
+    }
+
+    .pagina-cuidados .dicas {
+        margin-top: 48px;
+    }
+
+    .pagina-cuidados .rodape-grade {
+        grid-template-columns: minmax(0, 1fr);
+        padding-block: 40px;
+    }
+
+    .pagina-cuidados .rodape-form {
+        flex-wrap: wrap;
+    }
+
+    .pagina-cuidados .rodape-form input {
+        flex: 1 1 180px;
+    }
+
+    .pagina-simulador .abas button {
+        min-height: 44px;
+        flex: 1 1 auto;
+    }
+
+    .pagina-simulador .corte {
+        min-height: 44px;
+    }
+
+    .pagina-simulador .opcoes {
+        gap: 8px;
+    }
+}
+
+/* Celulares estreitos */
+@media (max-width: 480px) {
+    .site-header {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) auto;
+        gap: 10px;
+    }
+
+    .site-header .site-logo {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .site-header .site-menu {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .site-header .site-cta {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+        margin: 0;
+    }
+
+    .site-header .site-nav {
+        grid-column: 1 / -1;
+        grid-row: 3;
+    }
+
+    .pagina-problema .cards-problema,
+    .pagina-problema .galeria {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-problema .cabecalho-solucao {
+        gap: 16px;
+    }
+
+    .pagina-cuidados .rodape-form {
+        flex-direction: column;
+    }
+
+    .pagina-cuidados .rodape-form input {
+        flex: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 380px) {
+    .pagina-estilos .estilos {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .pagina-cuidados .rotina-lista li {
+        gap: 8px;
+    }
+
+    .pagina-cuidados .rotina-icone {
+        flex-basis: 32px;
+        height: 32px;
+    }
+
+    .pagina-simulador .painel {
+        padding: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
