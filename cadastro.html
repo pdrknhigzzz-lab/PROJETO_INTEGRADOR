@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cadastro | Hairstyle</title>
+        <link rel="stylesheet" href="login.css" />
+        <link rel="stylesheet" href="global.css" />
+    </head>
+    <body class="pagina-auth">
+        <a href="index.html" class="voltar-inicio">← Voltar ao início</a>
+        <main class="container">
+            <section class="cadastro">
+                <div class="titulo">
+                    <span>Hair Style</span>
+                    <h1>Crie sua conta.</h1>
+                    <p>
+                        Teste o formulário de cadastro. Os dados preenchidos ficam somente nesta página.
+                    </p>
+                </div>
+
+                <form action="cadastro.php" method="POST" data-demo>
+                    <div class="campo">
+                        <label for="nome">Nome completo</label>
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Digite seu nome completo"
+                            autocomplete="name"
+                            required
+                            aria-describedby="erro-nome"
+                        />
+                        <small class="erro-campo" id="erro-nome"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="voce@email.com"
+                            autocomplete="email"
+                            required
+                            aria-describedby="erro-email"
+                        />
+                        <small class="erro-campo" id="erro-email"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="senha">Senha</label>
+                        <input
+                            type="password"
+                            id="senha"
+                            name="senha"
+                            placeholder="Crie uma senha"
+                            autocomplete="new-password"
+                            required
+                            aria-describedby="erro-senha"
+                        />
+                        <small class="erro-campo" id="erro-senha"></small>
+                    </div>
+
+                    <div class="campo">
+                        <label for="confirmar_senha">Confirmar senha</label>
+                        <input
+                            type="password"
+                            id="confirmar_senha"
+                            name="confirmar_senha"
+                            placeholder="Digite sua senha novamente"
+                            autocomplete="new-password"
+                            required
+                            aria-describedby="erro-confirmar_senha"
+                        />
+                        <small class="erro-campo" id="erro-confirmar_senha"></small>
+                    </div>
+
+                    <noscript><p>Ative o JavaScript para testar o formulário.</p></noscript>
+                    <button type="submit" disabled class="botao">Criar conta</button>
+
+                    <p id="mensagem-formulario" role="status"></p>
+                </form>
+                <div class="login-link">
+                    <p>Já tem uma conta?</p>
+                    <a href="login.html">Entrar</a>
+                </div>
+            </section>
+
+            <section class="imagem">
+                <img src="./img/foto1.png" alt="Modelo Hair Style" />
+            </section>
+        </main>
+
+        <script src="auth.js" defer></script>
+    </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dúvidas | Hairstyle</title>
+
+    <link rel="stylesheet" href="fac.css">
+    <link rel="stylesheet" href="global.css">
+    <script src="menu.js" defer></script>
+</head>
+
+<body class="pagina-fac">
+
+    <header class="site-header">
+        <a class="site-logo" href="index.html" aria-label="Hairstyle, início">Hair<span>style</span></a>
+        <button type="button" class="site-menu" aria-expanded="false" aria-controls="menu-principal" hidden>Menu</button>
+        <nav class="site-nav" id="menu-principal" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="estilos.html">Estilos</a>
+            <a href="cuidados.html">Cuidados</a>
+            <a href="problema.html">O problema</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="fac.html" aria-current="page">Dúvidas</a>
+            <a href="login.html">Entrar</a>
+        </nav>
+        <a class="site-cta" href="estilos.html">Explorar estilos</a>
+    </header>
+
+    <main>
+
+        <section class="perguntas">
+            <h1>TIRE SUAS DÚVIDAS</h1>
+
+            <p>Principais dúvidas:</p>
+
+            <button class="pergunta" type="button" data-pergunta="projeto" aria-controls="resposta">
+                O que é a Hairstyle?
+            </button>
+
+            <button class="pergunta" type="button" data-pergunta="cortes" aria-controls="resposta">
+                Como encontro referências de cortes?
+            </button>
+
+            <button class="pergunta" type="button" data-pergunta="cuidados" aria-controls="resposta">
+                Como faço para cuidar do meu tipo de cabelo?
+            </button>
+
+            <button class="pergunta" type="button" data-pergunta="resultado" aria-controls="resposta">
+                As referências garantem o resultado do corte?
+            </button>
+
+            <button class="pergunta" type="button" data-pergunta="conta" aria-controls="resposta">
+                Preciso criar uma conta para explorar o site?
+            </button>
+
+            <button class="pergunta" type="button" data-pergunta="penteados" aria-controls="resposta">
+                Onde encontro penteados e cores?
+            </button>
+
+            <form class="outra">
+                <input
+                    type="text"
+                    id="outraPergunta" aria-label="Sua pergunta"
+                    placeholder="Escreva sua pergunta..."
+                >
+
+                <button type="submit">
+                    Enviar pergunta
+                </button>
+            </form>
+
+            <div class="contatos"><p>Hairstyle — Projeto Integrador. O envio de perguntas ainda depende da integração com o servidor.</p></div>
+
+        </section>
+
+        <section class="respostas">
+
+            <h2>Respostas</h2>
+
+            <div class="chat">
+
+                <div id="resposta" role="status" aria-live="polite">
+                    Clique em uma pergunta para ver a resposta.
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="fac.js" defer></script>
+
+</body>
+
+</html>

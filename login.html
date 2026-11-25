@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Entrar | Hairstyle</title>
+        <link rel="stylesheet" href="login.css" />
+        <link rel="stylesheet" href="global.css" />
+    </head>
+    <body class="pagina-auth">
+        <a href="index.html" class="voltar-inicio">← Voltar ao início</a>
+
+        <main class="login">
+            <div>Hair <span>Style</span></div>
+            <h1>Bem-vindo de volta.</h1>
+            <p class="subtitulo">
+                Teste o formulário de login. O acesso à conta depende da conexão com o servidor.
+            </p>
+
+            <form action="login.php" method="POST" id="formLogin" data-demo>
+                <div class="card-login">
+                    <label for="email">E-mail</label>
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="voce@email.com"
+                        autocomplete="email"
+                        required
+                        aria-describedby="erro-email"
+                    />
+                    <small class="erro-campo" id="erro-email"></small>
+                </div>
+
+                <div class="card-login">
+                    <label for="senha">Senha</label>
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required
+                        aria-describedby="erro-senha"
+                    />
+                    <small class="erro-campo" id="erro-senha"></small>
+                </div>
+                <p id="mensagem-formulario" role="status"></p>
+                <noscript><p>Ative o JavaScript para testar o formulário.</p></noscript>
+                <button type="submit" disabled class="btn-login">Entrar</button>
+            </form>
+            <div class="cadastro-link">
+                <p>Não tem uma conta?</p>
+                <a href="cadastro.html" class="botao-cadastro"> Criar conta </a>
+            </div>
+        </main>
+
+        <div class="login-imagem"><img src="img/foto1.png" alt="Referência de estilo capilar" /></div>
+        <script src="auth.js" defer></script>
+    </body>
+</html>

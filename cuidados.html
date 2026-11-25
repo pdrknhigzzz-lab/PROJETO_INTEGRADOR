@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidados | Hairstyle</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&amp;family=Geist:wght@300;400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="cuidados.css">
+    <script src="cuidados.js" defer></script>
+    <link rel="stylesheet" href="global.css">
+    <script src="menu.js" defer></script>
+</head>
+<body class="pagina-cuidados">
+
+    <svg class="biblioteca-icones" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+            <linearGradient id="degrade-logo" x1="4" y1="2" x2="28" y2="30" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#6c3bff"/>
+                <stop offset="1" stop-color="#b78cff"/>
+            </linearGradient>
+        </defs>
+        <symbol id="marca-hairstyle" viewBox="0 0 32 32" fill="none" stroke-linecap="round" stroke-width="3.4">
+            <path d="M9.5 3c-3.6 8.5 3.4 11 0 26M22.5 3c-3.6 8.5 3.4 11 0 26" stroke="url(#degrade-logo)"/>
+            <path d="M9.5 16.5c4.4-3.4 8.6 3.4 13 0" stroke="currentColor"/>
+        </symbol>
+        <symbol id="icone-check" viewBox="0 0 24 24">
+            <path d="M20 6 9 17l-5-5"/>
+        </symbol>
+        <symbol id="icone-gotas" viewBox="0 0 24 24">
+            <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z"/>
+            <path d="M12.56 6.6A10.97 10.97 0 0 0 14 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 0 1-11.91 4.97"/>
+        </symbol>
+        <symbol id="icone-brilho" viewBox="0 0 24 24">
+            <path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/>
+            <path d="M20 2v4"/>
+            <path d="M22 4h-4"/>
+            <circle cx="4" cy="20" r="2"/>
+        </symbol>
+        <symbol id="icone-lua" viewBox="0 0 24 24">
+            <path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/>
+        </symbol>
+        <symbol id="icone-sol" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2"/>
+            <path d="M12 20v2"/>
+            <path d="m4.93 4.93 1.41 1.41"/>
+            <path d="m17.66 17.66 1.41 1.41"/>
+            <path d="M2 12h2"/>
+            <path d="M20 12h2"/>
+            <path d="m6.34 17.66-1.41 1.41"/>
+            <path d="m19.07 4.93-1.41 1.41"/>
+        </symbol>
+        <symbol id="icone-vento" viewBox="0 0 24 24">
+            <path d="M12.8 19.6A2 2 0 1 0 14 16H2"/>
+            <path d="M17.5 8a2.5 2.5 0 1 1 2 4H2"/>
+            <path d="M9.8 4.4A2 2 0 1 1 11 8H2"/>
+        </symbol>
+    </svg>
+
+    <header class="site-header">
+        <a class="site-logo" href="index.html" aria-label="Hairstyle, início">Hair<span>style</span></a>
+        <button type="button" class="site-menu" aria-expanded="false" aria-controls="menu-principal" hidden>Menu</button>
+        <nav class="site-nav" id="menu-principal" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="estilos.html">Estilos</a>
+            <a href="cuidados.html" aria-current="page">Cuidados</a>
+            <a href="problema.html">O problema</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="fac.html">Dúvidas</a>
+            <a href="login.html">Entrar</a>
+        </nav>
+        <a class="site-cta" href="estilos.html">Explorar estilos</a>
+    </header>
+
+    <main>
+        <section class="introducao" aria-labelledby="titulo-cuidados">
+            <div class="container">
+                <p class="rotulo">Cuidados capilares</p>
+                <h1 id="titulo-cuidados">Seu cabelo também precisa de cuidados.</h1>
+                <p class="resumo">Informe o tipo do seu cabelo e encontre produtos e rotinas relacionados às suas características.</p>
+
+                <div class="paineis">
+                    <section class="painel painel-cabelo" aria-label="Meu tipo de cabelo">
+                        <p class="selo selo-escuro">Meu tipo de cabelo</p>
+                        <div aria-live="polite" aria-atomic="true">
+                            <h2 id="nome-cabelo">Ondulado</h2>
+                            <p id="numero-cabelo">Tipo 2</p>
+                        </div>
+                        <div class="tipos-cabelo" role="group" aria-label="Tipos de cabelo">
+                            <button class="tipo-cabelo" type="button" data-tipo="liso" aria-pressed="false"><svg class="icone" width="14" height="14" aria-hidden="true"><use href="#icone-check"/></svg>Liso</button>
+                            <button class="tipo-cabelo" type="button" data-tipo="ondulado" aria-pressed="true"><svg class="icone" width="14" height="14" aria-hidden="true"><use href="#icone-check"/></svg>Ondulado</button>
+                            <button class="tipo-cabelo" type="button" data-tipo="cacheado" aria-pressed="false"><svg class="icone" width="14" height="14" aria-hidden="true"><use href="#icone-check"/></svg>Cacheado</button>
+                            <button class="tipo-cabelo" type="button" data-tipo="crespo" aria-pressed="false"><svg class="icone" width="14" height="14" aria-hidden="true"><use href="#icone-check"/></svg>Crespo</button>
+                        </div>
+                        <ul class="lista-recomendacoes">
+                            <li><svg class="icone" width="15" height="15" aria-hidden="true"><use href="#icone-check"/></svg><span>Hidratação semanal</span></li>
+                            <li><svg class="icone" width="15" height="15" aria-hidden="true"><use href="#icone-check"/></svg><span>Finalização com leave-in</span></li>
+                            <li><svg class="icone" width="15" height="15" aria-hidden="true"><use href="#icone-check"/></svg><span>Proteção térmica sempre</span></li>
+                        </ul>
+                    </section>
+
+                    <section class="painel painel-rotina" aria-labelledby="titulo-rotina">
+                        <div class="rotina-cabecalho">
+                            <h2 id="titulo-rotina">Sugestão de rotina</h2>
+                            <span class="selo">Semana</span>
+                        </div>
+                        <ul class="rotina-lista">
+                            <li>
+                                <abbr title="Segunda-feira">Seg</abbr>
+                                <span class="rotina-icone"><svg class="icone" width="18" height="18" aria-hidden="true"><use href="#icone-gotas"/></svg></span>
+                                <div><strong>Lavar</strong><p>Shampoo Equilíbrio + condicionador</p></div>
+                            </li>
+                            <li>
+                                <abbr title="Quarta-feira">Qua</abbr>
+                                <span class="rotina-icone"><svg class="icone" width="18" height="18" aria-hidden="true"><use href="#icone-brilho"/></svg></span>
+                                <div><strong>Hidratar</strong><p>Máscara de hidratação profunda, 10 min</p></div>
+                            </li>
+                            <li>
+                                <abbr title="Sexta-feira">Sex</abbr>
+                                <span class="rotina-icone"><svg class="icone" width="18" height="18" aria-hidden="true"><use href="#icone-gotas"/></svg></span>
+                                <div><strong>Lavar</strong><p>Shampoo + leave-in de definição</p></div>
+                            </li>
+                            <li>
+                                <abbr title="Domingo">Dom</abbr>
+                                <span class="rotina-icone"><svg class="icone" width="18" height="18" aria-hidden="true"><use href="#icone-lua"/></svg></span>
+                                <div><strong>Descanso</strong><p>Finalizar com óleo nas pontas</p></div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <div class="container conteudo">
+            <section aria-labelledby="titulo-produtos">
+                <div class="produtos-cabecalho">
+                    <div>
+                        <p class="rotulo">Exemplos de produtos</p>
+                        <h2 id="titulo-produtos">Sugestões para cabelo <span id="tipo-produtos">ondulado</span></h2>
+                    </div>
+                    <div class="filtros" role="group" aria-label="Filtrar produtos por categoria">
+                        <button type="button" data-categoria="Todos" aria-pressed="true">Todos</button>
+                        <button type="button" data-categoria="Limpeza" aria-pressed="false">Limpeza</button>
+                        <button type="button" data-categoria="Tratamento" aria-pressed="false">Tratamento</button>
+                        <button type="button" data-categoria="Finalização" aria-pressed="false">Finalização</button>
+                        <button type="button" data-categoria="Proteção" aria-pressed="false">Proteção</button>
+                    </div>
+                </div>
+                <p class="somente-leitor" id="status-produtos" role="status"></p>
+                <div class="produtos-grade" id="produtos"></div>
+                <noscript><p>Ative o JavaScript para visualizar e filtrar os produtos.</p></noscript>
+                <template id="modelo-produto">
+                    <article class="produto">
+                        <div class="produto-arte"></div>
+                        <div class="produto-info">
+                            <span class="selo selo-suave"></span>
+                            <h3></h3>
+                            <p class="produto-descricao"></p>
+                            <p class="produto-uso"></p>
+                        </div>
+                    </article>
+                </template>
+            </section>
+
+            <section class="dicas" aria-labelledby="titulo-dicas">
+                <h2 class="rotulo" id="titulo-dicas">Dicas</h2>
+                <div class="dicas-grade">
+                    <article class="painel">
+                        <svg class="icone" width="22" height="22" aria-hidden="true"><use href="#icone-sol"/></svg>
+                        <h3>Proteja do sol e do calor</h3>
+                        <p>Use protetor térmico antes de secador e chapinha.</p>
+                    </article>
+                    <article class="painel">
+                        <svg class="icone" width="22" height="22" aria-hidden="true"><use href="#icone-vento"/></svg>
+                        <h3>Seque com delicadeza</h3>
+                        <p>Prefira toalha de microfibra e evite torcer os fios.</p>
+                    </article>
+                    <article class="painel">
+                        <svg class="icone" width="22" height="22" aria-hidden="true"><use href="#icone-gotas"/></svg>
+                        <h3>Água morna, não quente</h3>
+                        <p>Água muito quente resseca e opaca a fibra capilar.</p>
+                    </article>
+                </div>
+                <div class="dicas-acao"><a class="botao" href="estilos.html">Explorar estilos</a></div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-grade">
+            <div>
+                <a class="logo" href="index.html" aria-label="Hairstyle, início">
+                    <svg aria-hidden="true"><use href="#marca-hairstyle"/></svg>
+                    <span>Hair<span class="roxo">style</span></span>
+                </a>
+                <p class="rodape-frase">Seu cabelo.<br>Suas possibilidades.</p>
+
+            </div>
+            <nav aria-label="Navegação do rodapé">
+                <p class="rotulo">Navegação</p>
+                <ul class="rodape-links">
+                    <li><a href="index.html">Início</a></li>
+
+                    <li><a href="estilos.html">Estilos</a></li>
+                    <li><a href="cuidados.html" aria-current="page">Cuidados</a></li>
+
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="fac.html">Dúvidas</a></li>
+                </ul>
+            </nav>
+            <section aria-labelledby="titulo-novidades">
+                <h2 class="rotulo" id="titulo-novidades">Novidades</h2>
+                <p class="rodape-novidades">Veja antes. Escolha melhor. Transforme seu estilo.</p>
+                <form class="rodape-form" id="form-novidades">
+                    <input type="email" placeholder="seu@email.com" aria-label="E-mail" autocomplete="email" required>
+                    <button class="botao" type="submit">Assinar</button>
+                </form>
+                <p class="rodape-mensagem" id="mensagem-novidades" role="status" hidden>As inscrições ainda não estão disponíveis.</p>
+            </section>
+        </div>
+        <div class="rodape-base">
+            <div class="container">
+                <span>© 2026 Hairstyle — Projeto Integrador</span>
+                <div></div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

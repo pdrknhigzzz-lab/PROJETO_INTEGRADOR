@@ -1,0 +1,239 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+  .login {
+    width: 52%;
+    min-height: 100vh;
+    background: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 8%;
+  }
+
+  .login h1 {
+    font-family: 'Inter', sans-serif;
+    font-size: 28px;
+    font-weight: 500;
+    color: #000000;
+    margin-bottom: 18px;
+  }
+
+  .subtitulo {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 38px;
+  }
+
+  .card-login {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 26px;
+  }
+
+  .card-login label {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #111111;
+  }
+
+  .card-login input {
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    background: #EEEEEE;
+    border: none;
+    border-radius: 9px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    outline: none;
+    box-shadow: none;
+  }
+
+  .card-login input:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+  }
+
+  .btn-login {
+    width: 100%;
+    height: 47px;
+    margin-top: 16px;
+    border: none;
+    border-radius: 30px;
+    background: #713CFF;
+    color: #FFFFFF;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+
+  }
+
+  .btn-login:hover {
+    background: #5B21B6;
+  }
+
+.login span {
+  color: #5B21B6;
+}
+.cadastro-link {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.cadastro-link p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.botao-cadastro {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #713BFF;
+  border-radius: 30px;
+  color: #713BFF;
+  text-decoration: none;
+  font-size: 16px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.botao-cadastro:hover {
+  background-color: #713BFF;
+  color: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #ffffff;
+}
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px 8%;
+  gap: 80px;
+}
+
+.cadastro {
+  width: 50%;
+  max-width: 650px;
+}
+
+.titulo span {
+  color: #713BFF;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.titulo h1 {
+  font-size: 35px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  color: #111111;
+}
+
+.titulo p {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 30px;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.campo label {
+  font-size: 15px;
+  margin-bottom: 9px;
+  color: #111111;
+}
+
+.campo input {
+  width: 100%;
+  height: 43px;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 9px;
+  background-color: #eeeeee;
+  font-size: 13px;
+  transition: 0.3s;
+}
+
+.campo input:focus {
+  border: 1px solid #713BFF;
+  background-color: #ffffff;
+}
+
+.botao {
+  width: 100%;
+  height: 45px;
+  margin-top: 8px;
+  border: none;
+  border-radius: 30px;
+  background-color: #713BFF;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.botao:hover {
+  background-color: #5724db;
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 22px;
+}
+
+.login-link p {
+  font-size: 14px;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.login-link a {
+  color: #713BFF;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.imagem {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.imagem img {
+  width: 100%;
+  max-width: 650px;
+  height: 645px;
+  object-fit: cover;
+  border-radius: 90px;
+}
