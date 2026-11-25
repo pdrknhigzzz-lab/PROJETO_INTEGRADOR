@@ -1,0 +1,137 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HairStyle - Simulador</title>
+    <link rel="stylesheet" href="simulador.css">
+</head>
+
+<body>
+
+    <!-- MENU SUPERIOR -->
+    <header>
+
+        <div class="logo">
+            Hair<span>Style</span>
+        </div>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Simulador</a>
+            <a href="#">Estilos</a>
+            <a href="#">Cuidados</a>
+            <a href="#">Para Profissionais</a>
+            <a href="#">Sobre</a>
+            <a href="#">Entrar</a>
+        </nav>
+
+        <button class="button">Experimentar agora</button>
+
+    </header>
+
+    <!-- ÁREA PRINCIPAL -->
+    <main>
+
+        <!-- MODELO 3D -->
+        <section class="modelo">
+               
+            <div class="aviso">
+                MODELO 3D - ARRASTE PARA GIRAR
+            </div>
+
+            <div class="informacoes">
+
+                <h4>SEU PERFIL</h4>
+
+                <p>Formato do rosto: OVAL</p>
+                <p>Tipo de cabelo: LISO</p>
+
+                <div class="caracteristicas">
+                    <span>DEGRADÊ</span>
+                    <span>CURTO</span>
+                    <span>PRETO</span>
+                </div>
+
+                <a href="#">AJUSTAR CARACTERÍSTICAS →</a>
+
+            </div>
+
+            
+
+                <div class="foto-modelo">
+                    <img id="imagemModelo" src="medio.arr.png" alt="Modelo masculino">
+                </div>
+
+            
+
+        </section>
+
+        <!-- PAINEL DE PERSONALIZAÇÃO -->
+        <section class="painel">
+
+            <div class="titulo-painel">
+
+                <h3>Personalizar</h3>
+
+                <span>PASSO 3 DE 4</span>
+
+            </div>
+
+            <!-- CATEGORIAS -->
+            <div class="abas">
+
+                <button>✂ Corte</button>
+                <button>📏 Comprimento</button>
+                <button>🎨 Cor</button>
+                <button>▨ Textura</button>
+
+            </div>
+
+            <!-- OPÇÕES DE CORTES -->
+            <div class="opcoes" id="opcoes">
+
+                <div class="corte" onclick="selecionar(this, 'Degradê')">
+                    <img src="medio.arr.png" alt="Modelo degrade">
+                    <h3>Degradê</h3>
+                    <p>Nas laterais</p>
+
+                </div>
+
+                <div class="corte" onclick="selecionar(this, 'curto')">
+
+                    <img src="curto.m.h.png" alt="Corte curto">
+
+                    <h3>Curto</h3>
+                    <p>1 ou 2 dedos</p>
+
+                </div>
+
+                <div class="corte" onclick="selecionar(this, 'camadas')">
+
+                    <img src="medio.degrade.png" alt="Corte em camadas">
+
+                    <h3>Camadas</h3>
+                    <p>Camadas ao longo do cabelo</p>
+
+                </div>
+
+                <div class="corte" onclick="selecionar(this, 'longo')">
+
+                    <img src="longo.m.h.png" alt="Cabelo longo">
+
+                    <h3>Longo</h3>
+                    <p>Nas laterais</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    <script src="simulado.js"></script>
+</body>
+</html>

@@ -1,0 +1,270 @@
+
+/* CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+/* CABEÇALHO */
+header {
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #8b43f5;
+}
+
+/* MENU */
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #777;
+    font-size: 12px;
+}
+
+/* BOTÃO */
+.button {
+    background: #8042ff;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+/* ÁREA PRINCIPAL */
+main {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 60px);
+}
+
+/* MODELO */
+.modelo {
+    flex: 0 0 65%;
+    min-width: 0;
+    background: #101010;
+    border: 2px solid #7c36ff;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* AVISO */
+.aviso {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #202020;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 11px;
+}
+
+/* INFORMAÇÕES */
+.informacoes {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: #202020;
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+    width: 160px;
+    font-size: 10px;
+    border: 1px solid #555;
+}
+
+.informacoes h4 {
+    color: #9b65ff;
+    margin-bottom: 10px;
+}
+
+.informacoes p {
+    color: #aaa;
+    margin-bottom: 7px;
+}
+
+/* CARACTERÍSTICAS */
+.caracteristicas {
+    display: flex;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.informacoes a {
+    color: #9b65ff;
+    text-decoration: none;
+}
+
+/* IMAGEM DO MODELO */
+.foto-modelo {
+    width: 100%;
+    max-width: 600px;
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foto-modelo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* PAINEL */
+.painel {
+    flex: 0 0 35%;
+    min-width: 0;
+    background: white;
+    overflow-y: auto;
+}
+
+/* TÍTULO */
+.titulo-painel {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.titulo-painel span {
+    color: #8042ff;
+    font-size: 10px;
+}
+
+/* ABAS */
+.abas {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #ddd;
+}
+
+.abas button {
+    background: none;
+    border: none;
+    padding: 13px 5px;
+    cursor: pointer;
+    font-size: 12px;
+    color: #333;
+}
+
+.abas button:hover {
+    color: #8042ff;
+    border-bottom: 2px solid #8042ff;
+}
+
+/* OPÇÕES */
+.opcoes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+    padding: 12px;
+}
+
+/* CARTÕES */
+.corte {
+    border: 1px solid #aaa;
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.corte:hover {
+    border: 2px solid #8042ff;
+    transform: translateY(-3px);
+}
+
+/* IMAGENS DOS CORTES */
+.corte img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* TEXTOS */
+.corte h3 {
+    font-size: 12px;
+    font-weight: normal;
+    margin: 8px;
+}
+
+.corte p {
+    color: #888;
+    font-size: 11px;
+    padding: 5px 10px 15px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 750px) {
+
+    header {
+        height: auto;
+        flex-wrap: wrap;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    nav {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    main {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .modelo {
+        flex: none;
+        width: 100%;
+        height: 400px;
+    }
+
+    .painel {
+        flex: none;
+        width: 100%;
+    }
+
+    .foto-modelo {
+        width: 85%;
+        height: 250px;
+    }
+
+}
+
+.corte.selecionado {
+    border: 2px solid #8042ff;
+    box-shadow: 0 0 10px #8042ff;
+}
