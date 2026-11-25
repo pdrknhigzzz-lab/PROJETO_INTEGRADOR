@@ -1,15 +1,14 @@
 <?php
-// Configure estas variáveis no ambiente do servidor:
-// HAIRSTYLE_DB_HOST, HAIRSTYLE_DB_USER, HAIRSTYLE_DB_PASSWORD e HAIRSTYLE_DB_NAME.
-
+// Desenvolvimento local (XAMPP): localhost / root / senha vazia / hairstyle.
+// Em hospedagem, configure as variáveis de ambiente abaixo com credenciais próprias.
 $servidor = getenv('HAIRSTYLE_DB_HOST') ?: 'localhost';
-$usuario = getenv('HAIRSTYLE_DB_USER');
+$usuario = getenv('HAIRSTYLE_DB_USER') ?: 'root';
 $senha = getenv('HAIRSTYLE_DB_PASSWORD');
-$banco = getenv('HAIRSTYLE_DB_NAME');
+$banco = getenv('HAIRSTYLE_DB_NAME') ?: 'hairstyle';
 
-if (!$usuario || !$banco || !extension_loaded('mysqli')) {
+if (!extension_loaded('mysqli')) {
     http_response_code(503);
-    exit('A conexão com o banco de dados ainda não está disponível.');
+    exit('A extensão mysqli do PHP não está habilitada.');
 }
 
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
@@ -26,5 +25,5 @@ try {
     // Não exponha credenciais nem detalhes internos do servidor.
     error_log('Hairstyle: falha ao conectar ao banco de dados.');
     http_response_code(503);
-    exit('Não foi possível conectar ao banco de dados.');
+    exit('Não foi possível conectar ao banco de dados. Confira a configuração do MySQL.');
 }
