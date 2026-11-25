@@ -9,7 +9,8 @@ const avisos = new Map([
     ['cadastrado', 'Cadastro realizado. Entre com seu e-mail e senha.']
 ]);
 if (!formulario.hasAttribute('data-demo')) {
-    document.querySelector('[data-aviso-demo]').hidden = true;
+    const avisoDemo = document.querySelector('[data-aviso-demo]');
+    if (avisoDemo) avisoDemo.hidden = true;
     mensagemFormulario.textContent = avisos.get(new URLSearchParams(location.search).get('estado')) || '';
 }
 
@@ -19,6 +20,9 @@ formulario.noValidate = true;
 function mensagemDoCampo(campo) {
     if (!campo.value.trim()) return 'Preencha este campo.';
     if (campo.type === 'email' && campo.validity.typeMismatch) return 'Digite um e-mail válido.';
+    if (campo.name === 'senha' && formulario.id !== 'formLogin' && (campo.value.length < 8 || campo.value.length > 72)) {
+        return 'A senha deve ter entre 8 e 72 caracteres.';
+    }
     if (campo.name === 'confirmar_senha' && campo.value !== formulario.elements.senha.value) {
         return 'As senhas precisam ser iguais.';
     }
