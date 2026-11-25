@@ -15,12 +15,11 @@
                     <span>Hair Style</span>
                     <h1>Crie sua conta.</h1>
                     <p data-aviso-demo>
-                        Teste o formulário de cadastro. Os dados preenchidos ficam somente nesta página.
+                        Crie uma conta para acessar sua área de usuário.
                     </p>
                 </div>
 
-                <!-- Remova data-demo quando o PHP e o banco estiverem configurados. -->
-                <form action="cadastro.php" method="POST" data-demo>
+                <form action="cadastro.php" method="POST">
                     <div class="campo">
                         <label for="nome">Nome completo</label>
                         <input
@@ -29,6 +28,7 @@
                             name="nome"
                             placeholder="Digite seu nome completo"
                             autocomplete="name"
+                            maxlength="100"
                             required
                             aria-describedby="erro-nome"
                         />
@@ -39,6 +39,7 @@
                         <label for="email">E-mail</label>
                         <input
                             type="email"
+                            maxlength="254"
                             id="email"
                             name="email"
                             placeholder="voce@email.com"
@@ -53,6 +54,8 @@
                         <label for="senha">Senha</label>
                         <input
                             type="password"
+                            minlength="8"
+                            maxlength="72"
                             id="senha"
                             name="senha"
                             placeholder="Crie uma senha"
@@ -67,6 +70,8 @@
                         <label for="confirmar_senha">Confirmar senha</label>
                         <input
                             type="password"
+                            minlength="8"
+                            maxlength="72"
                             id="confirmar_senha"
                             name="confirmar_senha"
                             placeholder="Digite sua senha novamente"
@@ -77,7 +82,7 @@
                         <small class="erro-campo" id="erro-confirmar_senha"></small>
                     </div>
 
-                    <noscript><p>Ative o JavaScript para testar o formulário.</p></noscript>
+                    <noscript><p>Ative o JavaScript para validar e enviar o formulário.</p></noscript>
                     <button type="submit" disabled class="botao">Criar conta</button>
 
                     <p id="mensagem-formulario" role="status"></p>
