@@ -14,11 +14,10 @@
             <div>Hair <span>Style</span></div>
             <h1>Bem-vindo de volta.</h1>
             <p data-aviso-demo class="subtitulo">
-                Teste o formulário de login. O acesso à conta depende da conexão com o servidor.
+                Entre com seu e-mail e senha cadastrados.
             </p>
 
-            <!-- Remova data-demo quando o PHP e o banco estiverem configurados. -->
-            <form action="login.php" method="POST" id="formLogin" data-demo>
+            <form action="login.php" method="POST" id="formLogin">
                 <div class="card-login">
                     <label for="email">E-mail</label>
                     <input
@@ -47,7 +46,7 @@
                     <small class="erro-campo" id="erro-senha"></small>
                 </div>
                 <p id="mensagem-formulario" role="status"></p>
-                <noscript><p>Ative o JavaScript para testar o formulário.</p></noscript>
+                <noscript><p>Ative o JavaScript para validar e enviar o formulário.</p></noscript>
                 <button type="submit" disabled class="btn-login">Entrar</button>
             </form>
             <div class="cadastro-link">
