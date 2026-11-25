@@ -21,7 +21,8 @@ perguntas.forEach((botao) => {
     botao.addEventListener('click', () => exibirResposta(respostas[botao.dataset.pergunta]));
 });
 
-document.querySelector('.outra').addEventListener('submit', (evento) => {
+const formularioPergunta = document.querySelector('.outra');
+formularioPergunta.addEventListener('submit', async (evento) => {
     evento.preventDefault();
     const campo = document.getElementById('outraPergunta');
     if (!campo.value.trim()) {
@@ -29,7 +30,30 @@ document.querySelector('.outra').addEventListener('submit', (evento) => {
         campo.reportValidity();
         return;
     }
-    exibirResposta('O envio de perguntas ainda não está disponível nesta versão.');
+    if (formularioPergunta.hasAttribute('data-demo')) {
+        exibirResposta('O envio de perguntas ainda não está disponível nesta versão.');
+        return;
+    }
+
+    const enviar = formularioPergunta.querySelector('button');
+    if (enviar.disabled) return;
+    enviar.disabled = true;
+    try {
+        const resposta = await fetch(formularioPergunta.action, {
+            method: 'POST',
+            body: new FormData(formularioPergunta)
+        });
+        if (!resposta.headers.get('Content-Type')?.startsWith('text/plain')) {
+            throw new Error('Resposta do servidor indisponível.');
+        }
+        const mensagem = await resposta.text();
+        exibirResposta(mensagem);
+        if (resposta.ok) formularioPergunta.reset();
+    } catch {
+        exibirResposta('Não foi possível enviar a pergunta. Tente novamente.');
+    } finally {
+        enviar.disabled = false;
+    }
 });
 
 document.getElementById('outraPergunta').addEventListener('input', (evento) => {

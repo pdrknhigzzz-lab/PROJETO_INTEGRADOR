@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador 2D | Hairstyle</title>
+    <link rel="stylesheet" href="simulador.css">
+    <link rel="stylesheet" href="global.css">
+    <script src="menu.js" defer></script>
+    <script src="simulador.js" defer></script>
+</head>
+<body class="pagina-simulador">
+    <header class="site-header">
+        <a class="site-logo" href="index.html" aria-label="Hairstyle, início">Hair<span>style</span></a>
+        <button type="button" class="site-menu" aria-expanded="false" aria-controls="menu-principal" hidden>Menu</button>
+        <nav class="site-nav" id="menu-principal" aria-label="Menu principal">
+            <a href="index.html">Início</a>
+            <a href="estilos.html">Estilos</a>
+            <a href="simulador.html" aria-current="page">Simulador 2D</a>
+            <a href="cuidados.html">Cuidados</a>
+            <a href="problema.html">O problema</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="fac.html">Dúvidas</a>
+            <a href="login.html">Entrar</a>
+        </nav>
+        <a class="site-cta" href="estilos.html">Explorar estilos</a>
+    </header>
+
+    <main>
+        <section class="modelo" aria-label="Referência selecionada">
+            <figure class="foto-modelo">
+                <img id="imagemModelo" src="fpi/medio.arr.png" alt="Corte degradê">
+                <figcaption id="modelo" aria-live="polite">Degradê · Médio</figcaption>
+            </figure>
+        </section>
+
+        <section class="painel" aria-labelledby="titulo-simulador">
+            <div class="titulo-painel">
+                <h1 id="titulo-simulador">Simulador de estilos</h1>
+                <p>Escolha um corte ou comprimento para trocar a foto. Use cor e textura para anotar o visual que você quer.</p>
+            </div>
+
+            <div class="abas" role="group" aria-label="Personalizar por">
+                <button type="button" data-categoria="corte" aria-pressed="true">Corte</button>
+                <button type="button" data-categoria="comprimento" aria-pressed="false">Comprimento</button>
+                <button type="button" data-categoria="cor" aria-pressed="false">Cor</button>
+                <button type="button" data-categoria="textura" aria-pressed="false">Textura</button>
+            </div>
+            <div class="opcoes" id="opcoes" role="group" aria-label="Opções de corte"></div>
+            <p class="preferencias" id="preferencias" aria-live="polite"></p>
+            <noscript><p>Ative o JavaScript para escolher outras referências.</p></noscript>
+        </section>
+    </main>
+</body>
+</html>

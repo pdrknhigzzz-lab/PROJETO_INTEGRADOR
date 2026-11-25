@@ -2,6 +2,17 @@ const formulario = document.querySelector('form');
 const campos = formulario.querySelectorAll('input');
 const mensagemFormulario = document.querySelector('#mensagem-formulario');
 
+const avisos = new Map([
+    ['credenciais', 'Confira seu e-mail e sua senha.'],
+    ['campos', 'Confira os campos e a confirmação da senha.'],
+    ['email', 'Este e-mail já está cadastrado.'],
+    ['cadastrado', 'Cadastro realizado. Entre com seu e-mail e senha.']
+]);
+if (!formulario.hasAttribute('data-demo')) {
+    document.querySelector('[data-aviso-demo]').hidden = true;
+    mensagemFormulario.textContent = avisos.get(new URLSearchParams(location.search).get('estado')) || '';
+}
+
 // Mantém a validação nativa disponível até que os avisos por campo estejam ativos.
 formulario.noValidate = true;
 
