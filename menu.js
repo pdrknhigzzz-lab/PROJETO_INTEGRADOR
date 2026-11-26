@@ -25,3 +25,35 @@ cabecalho.addEventListener('keydown', (evento) => {
 
 telaPequena.addEventListener('change', ajustarMenu);
 ajustarMenu();
+
+const linkEntrar = cabecalho.querySelector('.site-nav a[href="login.html"]');
+const conta = document.createElement('form');
+conta.className = 'menu-conta';
+conta.action = 'logout.php';
+conta.method = 'post';
+
+const nomeUsuario = document.createElement('span');
+const botaoSair = document.createElement('button');
+botaoSair.type = 'submit';
+botaoSair.textContent = 'Sair';
+conta.append(nomeUsuario, botaoSair);
+
+async function atualizarConta() {
+    try {
+        const resposta = await fetch('sessao.php', { cache: 'no-store' });
+        if (resposta.ok && resposta.headers.get('Content-Type')?.includes('application/json')) {
+            const sessao = await resposta.json();
+            if (sessao.nome) {
+                nomeUsuario.textContent = 'Olá, ' + sessao.nome;
+                if (linkEntrar.isConnected) linkEntrar.replaceWith(conta);
+                return;
+            }
+        }
+    } catch {
+        // A navegação pública também funciona quando o PHP está indisponível.
+    }
+    if (conta.isConnected) conta.replaceWith(linkEntrar);
+}
+
+// Consulta a sessão novamente ao voltar para uma página pelo histórico.
+window.addEventListener('pageshow', atualizarConta);

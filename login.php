@@ -20,7 +20,7 @@ require __DIR__ . '/conexao.php';
 
 try {
     $stmt = $conexao->prepare(
-        'SELECT id, nome, senha FROM usuarios WHERE email = ? LIMIT 1'
+        'SELECT id_usuario, nome, senha FROM usuarios WHERE email = ? LIMIT 1'
     );
     $stmt->bind_param('s', $email);
     $stmt->execute();

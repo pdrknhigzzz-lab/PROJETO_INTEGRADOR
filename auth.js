@@ -6,7 +6,8 @@ const avisos = new Map([
     ['credenciais', 'Confira seu e-mail e sua senha.'],
     ['campos', 'Confira os campos e a confirmação da senha.'],
     ['email', 'Este e-mail já está cadastrado.'],
-    ['cadastrado', 'Cadastro realizado. Entre com seu e-mail e senha.']
+    ['cadastrado', 'Cadastro realizado. Entre com seu e-mail e senha.'],
+    ['saiu', 'Você saiu da sua conta.']
 ]);
 if (!formulario.hasAttribute('data-demo')) {
     const avisoDemo = document.querySelector('[data-aviso-demo]');

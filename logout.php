@@ -1,4 +1,10 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('Allow: POST');
+    http_response_code(405);
+    exit('Use o botão Sair no menu.');
+}
+
 // Encerra a sessão do usuário e invalida o cookie de sessão.
 session_start();
 $_SESSION = [];

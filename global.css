@@ -57,6 +57,26 @@ input:focus-visible {
     text-decoration: underline;
     text-underline-offset: 5px;
 }
+.site-nav .menu-conta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    max-width: 100%;
+    margin: 0;
+    font: 14px Arial, sans-serif;
+}
+.menu-conta span {
+    overflow-wrap: anywhere;
+}
+.site-nav .menu-conta button {
+    background: transparent;
+    color: #5b21b6;
+    border: 0;
+    padding: 8px;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+}
 .site-cta {
     display: inline-block;
     background: #703cff;
