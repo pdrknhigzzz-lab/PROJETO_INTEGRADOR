@@ -3,7 +3,7 @@
 // Em hospedagem, configure as variáveis de ambiente abaixo com credenciais próprias.
 $servidor = getenv('HAIRSTYLE_DB_HOST') ?: 'localhost';
 $usuario = getenv('HAIRSTYLE_DB_USER') ?: 'root';
-$senha = getenv('HAIRSTYLE_DB_PASSWORD');
+$senhaBanco = getenv('HAIRSTYLE_DB_PASSWORD');
 $banco = getenv('HAIRSTYLE_DB_NAME') ?: 'hairstyle';
 
 if (!extension_loaded('mysqli')) {
@@ -17,7 +17,7 @@ try {
     $conexao = new mysqli(
         $servidor,
         $usuario,
-        $senha === false ? '' : $senha,
+        $senhaBanco === false ? '' : $senhaBanco,
         $banco
     );
     $conexao->set_charset('utf8mb4');
