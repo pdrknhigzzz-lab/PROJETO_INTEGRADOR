@@ -34,7 +34,7 @@ try {
     // A restrição UNIQUE no campo email também evita cadastros duplicados simultâneos.
     $hash = password_hash($senha, PASSWORD_DEFAULT);
     $stmt = $conexao->prepare(
-        'INSERT INTO usuarios (nome, email, senha) VALUES (?, ?, ?)'
+        'INSERT INTO usuarios (nome, email, senha, criado_em) VALUES (?, ?, ?, CURRENT_TIMESTAMP)'
     );
     $stmt->bind_param('sss', $nome, $email, $hash);
     $stmt->execute();

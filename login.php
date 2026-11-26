@@ -48,7 +48,7 @@ try {
     header('Location: index.html', true, 303);
     exit;
 } catch (mysqli_sql_exception $erro) {
-    error_log('Hairstyle: falha ao autenticar usuário.');
+    error_log('Hairstyle: falha na consulta de login (' . $erro->getCode() . '): ' . $erro->getMessage());
     http_response_code(503);
     echo 'O login está indisponível no momento.';
 }
