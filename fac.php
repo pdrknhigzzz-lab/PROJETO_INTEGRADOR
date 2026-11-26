@@ -24,7 +24,7 @@ if ($pergunta === '' || $tamanho > 1000) {
 require __DIR__ . '/conexao.php';
 
 try {
-    $stmt = $conexao->prepare('INSERT INTO perguntas (pergunta) VALUES (?)');
+    $stmt = $conexao->prepare('INSERT INTO perguntas (pergunta, criado_em) VALUES (?, CURRENT_TIMESTAMP)');
     $stmt->bind_param('s', $pergunta);
     $stmt->execute();
 
